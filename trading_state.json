@@ -5,21 +5,8 @@
   ],
   "tg_offset": 419999581,
   "last_scan_date": "2026-08-31",
-  "last_track_date": "2026-09-04",
+  "last_track_date": "2026-09-07",
   "open_signals": [
-    {
-      "symbol": "INTC",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-08-24",
-      "alerted_at": "2026-08-25T10:41:11+00:00",
-      "score": 97.07,
-      "confidence": 0.0,
-      "entry_max": 89.17667451420935,
-      "stop": 84.06554247631776,
-      "target": 95.56558956157384,
-      "risk_reward": 1.25
-    },
     {
       "symbol": "KO",
       "asset_class": "stock",
@@ -543,6 +530,28 @@
       "exit_date": "2026-09-02",
       "r_multiple": 0.7798,
       "return_pct": 0.0212,
+      "is_win": true
+    },
+    {
+      "symbol": "INTC",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-08-24",
+      "alerted_at": "2026-08-25T10:41:11+00:00",
+      "score": 97.07,
+      "confidence": 0.0,
+      "entry_max": 89.17667451420935,
+      "stop": 84.06554247631776,
+      "target": 95.56558956157384,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "win",
+      "entry_price": 89.17667451420935,
+      "exit_price": 95.56558956157384,
+      "entry_date": "2026-08-25",
+      "exit_date": "2026-09-04",
+      "r_multiple": 1.25,
+      "return_pct": 0.0706,
       "is_win": true
     }
   ]
