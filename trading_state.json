@@ -5,7 +5,7 @@
   ],
   "tg_offset": 419999581,
   "last_scan_date": "2026-08-31",
-  "last_track_date": "2026-09-07",
+  "last_track_date": "2026-09-08",
   "open_signals": [
     {
       "symbol": "KO",
@@ -19,19 +19,6 @@
       "stop": 86.6947352220363,
       "target": 91.07844211352801,
       "risk_reward": 0.548
-    },
-    {
-      "symbol": "LLY",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-08-31",
-      "alerted_at": "2026-08-31T14:11:47+00:00",
-      "score": 97.48,
-      "confidence": 0.0,
-      "entry_max": 1159.8439014806029,
-      "stop": 1129.7001641989953,
-      "target": 1197.5235730826123,
-      "risk_reward": 1.25
     }
   ],
   "history": [
@@ -553,6 +540,28 @@
       "r_multiple": 1.25,
       "return_pct": 0.0706,
       "is_win": true
+    },
+    {
+      "symbol": "LLY",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-08-31",
+      "alerted_at": "2026-08-31T14:11:47+00:00",
+      "score": 97.48,
+      "confidence": 0.0,
+      "entry_max": 1159.8439014806029,
+      "stop": 1129.7001641989953,
+      "target": 1197.5235730826123,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 1159.8439014806029,
+      "exit_price": 1129.7001641989953,
+      "entry_date": "2026-09-01",
+      "exit_date": "2026-09-08",
+      "r_multiple": -1.0,
+      "return_pct": -0.027,
+      "is_win": false
     }
   ]
 }
