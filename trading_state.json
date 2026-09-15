@@ -4,7 +4,7 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-08-31",
+  "last_scan_date": "2026-09-15",
   "last_track_date": "2026-09-15",
   "open_signals": [
     {
@@ -19,6 +19,45 @@
       "stop": 86.6947352220363,
       "target": 91.07844211352801,
       "risk_reward": 0.548
+    },
+    {
+      "symbol": "RTX",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-09-15",
+      "alerted_at": "2026-09-15T15:51:00+00:00",
+      "score": 91.49,
+      "confidence": 0.0,
+      "entry_max": 196.1689095241034,
+      "stop": 192.67703015863222,
+      "target": 200.19860793778147,
+      "risk_reward": 1.154
+    },
+    {
+      "symbol": "MS",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-09-15",
+      "alerted_at": "2026-09-15T15:51:03+00:00",
+      "score": 90.18,
+      "confidence": 0.0,
+      "entry_max": 203.14402620038953,
+      "stop": 198.89328966601747,
+      "target": 208.45744686835462,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "GS",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-09-15",
+      "alerted_at": "2026-09-15T15:51:05+00:00",
+      "score": 90.1,
+      "confidence": 0.0,
+      "entry_max": 968.099707894566,
+      "stop": 946.4738201757234,
+      "target": 995.1320675431192,
+      "risk_reward": 1.25
     }
   ],
   "history": [
