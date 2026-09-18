@@ -5,7 +5,7 @@
   ],
   "tg_offset": 419999581,
   "last_scan_date": "2026-09-15",
-  "last_track_date": "2026-09-17",
+  "last_track_date": "2026-09-18",
   "open_signals": [
     {
       "symbol": "KO",
@@ -19,19 +19,6 @@
       "stop": 86.6947352220363,
       "target": 91.07844211352801,
       "risk_reward": 0.548
-    },
-    {
-      "symbol": "RTX",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-09-15",
-      "alerted_at": "2026-09-15T15:51:00+00:00",
-      "score": 91.49,
-      "confidence": 0.0,
-      "entry_max": 196.1689095241034,
-      "stop": 192.67703015863222,
-      "target": 200.19860793778147,
-      "risk_reward": 1.154
     },
     {
       "symbol": "MS",
@@ -609,6 +596,28 @@
       "exit_date": "2026-09-16",
       "r_multiple": -1.0,
       "return_pct": -0.0233,
+      "is_win": false
+    },
+    {
+      "symbol": "RTX",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-09-15",
+      "alerted_at": "2026-09-15T15:51:00+00:00",
+      "score": 91.49,
+      "confidence": 0.0,
+      "entry_max": 196.1689095241034,
+      "stop": 192.67703015863222,
+      "target": 200.19860793778147,
+      "risk_reward": 1.154,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 195.39,
+      "exit_price": 192.67703015863222,
+      "entry_date": "2026-09-16",
+      "exit_date": "2026-09-17",
+      "r_multiple": -0.7769,
+      "return_pct": -0.0149,
       "is_win": false
     }
   ]
