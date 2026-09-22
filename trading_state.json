@@ -5,7 +5,7 @@
   ],
   "tg_offset": 419999581,
   "last_scan_date": "2026-09-15",
-  "last_track_date": "2026-09-21",
+  "last_track_date": "2026-09-22",
   "open_signals": [
     {
       "symbol": "KO",
@@ -19,19 +19,6 @@
       "stop": 86.6947352220363,
       "target": 91.07844211352801,
       "risk_reward": 0.548
-    },
-    {
-      "symbol": "MS",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-09-15",
-      "alerted_at": "2026-09-15T15:51:03+00:00",
-      "score": 90.18,
-      "confidence": 0.0,
-      "entry_max": 203.14402620038953,
-      "stop": 198.89328966601747,
-      "target": 208.45744686835462,
-      "risk_reward": 1.25
     }
   ],
   "history": [
@@ -618,6 +605,28 @@
       "exit_date": "2026-09-17",
       "r_multiple": -0.7769,
       "return_pct": -0.0149,
+      "is_win": false
+    },
+    {
+      "symbol": "MS",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-09-15",
+      "alerted_at": "2026-09-15T15:51:03+00:00",
+      "score": 90.18,
+      "confidence": 0.0,
+      "entry_max": 203.14402620038953,
+      "stop": 198.89328966601747,
+      "target": 208.45744686835462,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 203.14402620038953,
+      "exit_price": 198.89328966601747,
+      "entry_date": "2026-09-16",
+      "exit_date": "2026-09-22",
+      "r_multiple": -1.0,
+      "return_pct": -0.0219,
       "is_win": false
     }
   ]
