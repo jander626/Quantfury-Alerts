@@ -393,6 +393,27 @@ def format_all_filtered(
     return "\n".join(lines)
 
 
+def format_missed_scan(reason: str) -> str:
+    """El cron disparó, pero siempre después de que cerrara la ventana.
+
+    Existe porque entre el 15 de septiembre y el 16 de octubre de 2026 el bot
+    estuvo 33 días SIN escanear, y nadie se enteró hasta preguntar: `track` y
+    `poll` seguían corriendo con normalidad, así que todo parecía sano. Un
+    cribador que no criba y no lo dice es indistinguible de uno roto.
+    """
+    return (
+        "⏰ *HOY NO HUBO CRIBA*\n"
+        "━━━━━━━━━━━━━━━━━━━━\n"
+        f"GitHub Actions disparó el cron tarde ({reason}): la ventana de la "
+        "mañana ya había cerrado cuando le tocó correr.\n\n"
+        "_No es un fallo del bot: `track` y `poll` siguen funcionando. Es que "
+        "el cron no disparó a tiempo hoy._\n\n"
+        "Si quieres la criba de todos modos, lánzala tú a mano desde "
+        "Actions → Cribador diario → Run workflow, con `mode: scan` y "
+        "`force: true`."
+    )
+
+
 def format_no_signals(funnel=None) -> str:
     """Día sin señales, con el embudo que explica dónde se quedaron.
 

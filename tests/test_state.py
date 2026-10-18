@@ -123,6 +123,21 @@ def test_scan_and_track_dedup_are_independent():
     assert state.already_scanned(day) and not state.already_tracked(day)
 
 
+def test_marking_a_missed_scan_notice_prevents_repeating_it():
+    """El 16 de octubre de 2026 el cron disparó tarde más de una vez el mismo
+    día: sin este corte, cada disparo tardío habría mandado un aviso nuevo.
+    Un aviso por día perdido es información; dos o tres es ruido.
+    """
+    from datetime import date
+
+    state = TradingState()
+    day = date(2026, 10, 16)
+    assert not state.already_notified_missed_scan(day)
+    state.mark_missed_scan_notified(day)
+    assert state.already_notified_missed_scan(day)
+    assert not state.already_notified_missed_scan(date(2026, 10, 17))
+
+
 # ── Resolución ────────────────────────────────────────────────────────────────
 
 def test_a_signal_with_no_history_yet_is_pending():
@@ -370,3 +385,61 @@ def test_cmd_track_only_hits_the_market_once_per_day(tmp_path, monkeypatch):
 
     trading_bot.cmd_track(argparse.Namespace(offline=True, dry_run=False, force=True))
     assert len(llamadas) == 2, "--force sí debe saltarse el corte"
+
+
+# ── cmd_scan avisa una vez por día perdido, no por disparo ──────────────────
+
+def test_cmd_scan_notifies_once_when_the_window_is_missed(tmp_path, monkeypatch):
+    """Reproduce el incidente del 16 de octubre de 2026: el cron disparó
+    `auto` dos veces ese día y las dos veces llegó después de cerrada la
+    ventana. Sin el aviso, el usuario no tenía forma de saberlo salvo
+    preguntando — track y poll seguían corriendo con normalidad.
+    """
+    import argparse
+    from datetime import date
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    import trading_bot
+    from trading import notify
+
+    state_path = str(tmp_path / "estado.json")
+    TradingState(chat_ids=["555"]).save(state_path)
+    monkeypatch.setattr(trading_bot, "STATE_FILE", state_path)
+    monkeypatch.setattr(
+        trading_bot, "should_scan",
+        lambda last_scan_date="": (
+            False, "ventana perdida (terminó a las 09:25 de Nueva York)"
+        ),
+    )
+    monkeypatch.setattr(trading_bot, "now_ny", lambda: _FixedNow())
+
+    enviados = []
+    monkeypatch.setattr(
+        notify.TelegramClient, "broadcast",
+        lambda self, text, chat_ids: enviados.append(text) or True,
+    )
+
+    args = argparse.Namespace(
+        offline=True, dry_run=False, force=False, no_llm=True,
+        direction="long", regla="reversion",
+    )
+
+    trading_bot.cmd_scan(args)   # primer disparo tardío del día: sí avisa
+    assert len(enviados) == 1
+    assert "no es un fallo del bot" in enviados[0].lower()
+
+    trading_bot.cmd_scan(args)   # segundo disparo tardío, mismo día: no repite
+    assert len(enviados) == 1, "no debe avisar dos veces el mismo día"
+
+    estado = TradingState.load(state_path)
+    assert estado.already_notified_missed_scan(date(2026, 10, 16))
+
+
+class _FixedNow:
+    """Doble mínimo de `datetime` para fijar la fecha en `now_ny().date()`."""
+
+    def date(self):
+        from datetime import date
+        return date(2026, 10, 16)

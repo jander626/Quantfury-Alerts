@@ -21,6 +21,7 @@ from trading.notify import (
     _split_message,
     format_all_filtered,
     format_help,
+    format_missed_scan,
     format_no_signals,
     format_outcome,
     format_performance,
@@ -399,3 +400,20 @@ def test_the_recent_segment_survives_a_save_and_load(tmp_path):
     assert restored.recent_for_asset_class("stock") is not None
     assert restored.edge_decayed("stock")
     assert "NO muestran ventaja demostrada" in format_signal(make_signal(), restored)
+
+
+# ── Aviso de ventana perdida ──────────────────────────────────────────────────
+
+def test_missed_scan_message_explains_it_is_not_a_bot_failure():
+    """El 16 de octubre de 2026 el bot llevaba 33 días sin escanear y nadie se
+    enteró hasta preguntar: track y poll seguían corriendo con normalidad, así
+    que todo parecía sano. El mensaje tiene que distinguir "GitHub disparó
+    tarde" de "el bot está roto", porque son dos problemas con remedios
+    distintos.
+    """
+    mensaje = format_missed_scan("ventana perdida (terminó a las 09:25 de Nueva York)")
+
+    assert "no es un fallo del bot" in mensaje.lower()
+    assert "09:25" in mensaje
+    assert "force" in mensaje.lower()        # cómo lanzarla a mano de todos modos
+    assert len(mensaje) <= TELEGRAM_MAX_LEN
