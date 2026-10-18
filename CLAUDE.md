@@ -97,6 +97,32 @@ mano. `poll` no lleva este corte a propósito: es barato (sin llamadas a
 datos de mercado) y conviene que responda a `/tomada`, `/cerrar` y `/paso`
 en cualquier disparo, no solo el de la mañana.
 
+**El descuadre de minuto (28 de agosto) no arregló el problema de fondo.**
+El 16 de octubre de 2026 se confirmó: desde el 15 de septiembre, `scan`
+llevaba **33 días sin ejecutarse ni una sola vez**. `track` y `poll` seguían
+funcionando con normalidad —por eso nadie lo notó sin revisar los logs de
+Actions—, lo que hacía que el bot pareciera sano estando mudo. El patrón en
+las ejecuciones: el cron pasó de disparar varias veces dispersas por la
+ventana (como se veía hasta el 26 de agosto) a disparar **una sola vez al
+día, de forma consistente DESPUÉS de las 14:00 UTC** — hasta seis horas
+tarde, todos los días hábiles, sin excepción. Esto es peor que "a veces se
+retrasa": es un retraso sistemático que ningún reordenamiento del minuto
+dentro de la hora iba a corregir, porque el cuello de botella no es la
+colisión en la hora en punto sino la cola de procesamiento de GitHub.
+
+Por eso ahora el bot **avisa cuando pierde el día entero** en vez de
+quedarse callado: si `should_scan` devuelve `WINDOW_MISSED_REASON` y todavía
+no se avisó hoy, `cmd_scan` manda un mensaje por Telegram explicando que no
+es un fallo del bot y cómo lanzar la criba a mano con `--force`.
+`TradingState.already_notified_missed_scan`/`mark_missed_scan_notified`
+evita repetirlo si el día tiene más de un disparo tardío. Esto NO arregla
+que la criba no llegue — solo convierte un silencio indistinguible de una
+avería en una información accionable. Si el patrón de "siempre tarde"
+persiste, la solución real es sacar el disparo de GitHub Actions (un
+servicio externo de cron que llame a `workflow_dispatch` por API a una hora
+exacta) — eso requiere que el usuario monte sus propias credenciales, así
+que es una decisión suya, no algo para activar en silencio.
+
 ## Estado del seguimiento en vivo
 
 Es ahora **la única medición que no viene de un backtest**, y por tanto la

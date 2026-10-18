@@ -74,6 +74,10 @@ class TradingState:
     # nuevo, porque una vela diaria no cambia entre un disparo y el siguiente
     # de la misma jornada.
     last_track_date: str = ""
+    # ISO, evita avisar más de una vez el mismo día si el día tiene dos
+    # disparos tardíos (pasó varias veces entre septiembre y octubre de
+    # 2026). Un aviso por día perdido es información; dos o tres es ruido.
+    last_missed_scan_notice: str = ""
     open_signals: list[dict] = field(default_factory=list)
     history: list[dict] = field(default_factory=list)
 
@@ -97,6 +101,7 @@ class TradingState:
             tg_offset=int(raw.get("tg_offset", 0)),
             last_scan_date=str(raw.get("last_scan_date", "")),
             last_track_date=str(raw.get("last_track_date", "")),
+            last_missed_scan_notice=str(raw.get("last_missed_scan_notice", "")),
             open_signals=list(raw.get("open_signals", [])),
             history=list(raw.get("history", [])),
         )
@@ -131,6 +136,12 @@ class TradingState:
 
     def mark_tracked(self, day: date) -> None:
         self.last_track_date = day.isoformat()
+
+    def already_notified_missed_scan(self, day: date) -> bool:
+        return self.last_missed_scan_notice == day.isoformat()
+
+    def mark_missed_scan_notified(self, day: date) -> None:
+        self.last_missed_scan_notice = day.isoformat()
 
     # ── Señales ───────────────────────────────────────────────────────────────
 

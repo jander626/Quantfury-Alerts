@@ -71,7 +71,7 @@ from trading.config import (
 )
 from trading.data import MarketData
 from trading.risk import Calibration
-from trading.schedule import should_scan
+from trading.schedule import WINDOW_MISSED_REASON, now_ny, should_scan
 from trading.state import TradingState
 from trading.strategy import Signal, scan_with_funnel
 from trading.universe import BENCHMARK_SYMBOL, Instrument
@@ -252,6 +252,21 @@ def cmd_scan(args: argparse.Namespace) -> int:
         allowed, reason = should_scan(last_scan_date=state.last_scan_date)
         if not allowed:
             print(f"[INFO] No toca escanear: {reason}")
+            if reason.startswith(WINDOW_MISSED_REASON):
+                # El 16 de octubre de 2026 se confirmó que esto llevaba
+                # pasando a diario desde el 15 de septiembre: GitHub disparaba
+                # el cron, pero siempre después de cerrada la ventana, y nadie
+                # se enteraba porque track y poll seguían corriendo con
+                # normalidad. Un aviso por día perdido, no uno por disparo
+                # tardío: con dos disparos el mismo día no hace falta repetirlo.
+                today = now_ny().date()
+                if not state.already_notified_missed_scan(today):
+                    if not args.dry_run:
+                        client.broadcast(notify.format_missed_scan(reason), state.chat_ids)
+                        state.mark_missed_scan_notified(today)
+                        state.save(STATE_FILE)
+                    else:
+                        print(notify.format_missed_scan(reason))
             return 0
         print(f"[INFO] Escaneando: {reason}")
 
@@ -314,8 +329,6 @@ def cmd_scan(args: argparse.Namespace) -> int:
     print(f"[INFO] Fichas entregadas: {delivered}")
 
     if not args.dry_run:
-        from trading.schedule import now_ny
-
         state.mark_scanned(now_ny().date())
         state.save(STATE_FILE)
     return 0
@@ -324,8 +337,6 @@ def cmd_scan(args: argparse.Namespace) -> int:
 # ── Seguimiento ───────────────────────────────────────────────────────────────
 
 def cmd_track(args: argparse.Namespace) -> int:
-    from trading.schedule import now_ny
-
     state = TradingState.load(STATE_FILE)
     today = now_ny().date()
 

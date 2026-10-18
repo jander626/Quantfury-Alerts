@@ -16,7 +16,12 @@ from pathlib import Path
 import pytest
 
 from trading.config import NY_TZ
-from trading.schedule import previous_trading_day, scan_window, should_scan
+from trading.schedule import (
+    WINDOW_MISSED_REASON,
+    previous_trading_day,
+    scan_window,
+    should_scan,
+)
 
 
 def ny(year, month, day, hour, minute=0) -> datetime:
@@ -39,6 +44,21 @@ def test_does_not_scan_after_the_window():
     """Una alerta con el mercado ya abierto lleva precios obsoletos."""
     allowed, reason = should_scan(ny(2026, 8, 12, 11, 0))
     assert not allowed and "ventana perdida" in reason
+
+
+def test_a_missed_window_reason_starts_with_the_stable_prefix():
+    """trading_bot usa este prefijo para decidir si avisa por Telegram.
+
+    El 16 de octubre de 2026 se confirmó que GitHub llevaba un mes disparando
+    siempre después de cerrada la ventana, y el bot se quedaba mudo porque
+    nada distinguía "se perdió el día" de "todavía no toca". Si este prefijo
+    cambia de texto sin que trading_bot lo sepa, el aviso deja de dispararse
+    en silencio — por eso el test fija el valor exacto, no solo que exista.
+    """
+    allowed, reason = should_scan(ny(2026, 8, 12, 11, 0))
+    assert not allowed
+    assert reason.startswith(WINDOW_MISSED_REASON)
+    assert WINDOW_MISSED_REASON == "ventana perdida"
 
 
 def test_the_window_ends_before_the_opening_bell():

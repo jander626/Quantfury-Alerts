@@ -27,6 +27,16 @@ from .config import (
     is_trading_day,
 )
 
+# Prefijo estable del motivo "se perdió la ventana". Vive aquí y no como un
+# texto suelto en trading_bot.py porque los dos necesitan coincidir: el 16 de
+# octubre de 2026 se confirmó que GitHub Actions llevaba más de un mes
+# disparando el cron siempre después del cierre de la ventana (14:00-19:45
+# UTC en vez de 10:00-13:25 UTC), y el bot se quedaba callado — nadie se
+# enteraba hasta preguntar. Este prefijo es lo que distingue "no tocaba
+# todavía" o "ya se escaneó hoy" de "se perdió el día entero", que es el único
+# caso que merece avisar por Telegram.
+WINDOW_MISSED_REASON = "ventana perdida"
+
 
 def now_ny(now: datetime | None = None) -> datetime:
     """Hora actual en Nueva York, que es la que manda para la apertura."""
@@ -66,7 +76,7 @@ def should_scan(
         # Se perdió la ventana. No se escanea fuera de plazo: una alerta que
         # llega con el mercado ya abierto tiene precios de entrada obsoletos,
         # y es peor que ninguna alerta.
-        return False, f"ventana perdida (terminó a las {end:%H:%M} de Nueva York)"
+        return False, f"{WINDOW_MISSED_REASON} (terminó a las {end:%H:%M} de Nueva York)"
 
     return True, f"dentro de la ventana ({start:%H:%M}–{end:%H:%M} de Nueva York)"
 
