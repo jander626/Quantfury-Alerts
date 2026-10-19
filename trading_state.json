@@ -4,10 +4,63 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-09-15",
-  "last_track_date": "2026-10-18",
+  "last_scan_date": "2026-10-19",
+  "last_track_date": "2026-10-19",
   "last_missed_scan_notice": "",
-  "open_signals": [],
+  "open_signals": [
+    {
+      "symbol": "QQQ",
+      "asset_class": "etf",
+      "direction": "long",
+      "signal_date": "2026-10-16",
+      "alerted_at": "2026-10-19T12:24:49+00:00",
+      "score": 98.7,
+      "confidence": 0.0,
+      "entry_max": 712.9636992928243,
+      "stop": 704.5271411786262,
+      "target": 723.5093969355721,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "ANET",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-16",
+      "alerted_at": "2026-10-19T12:24:50+00:00",
+      "score": 97.44,
+      "confidence": 0.0,
+      "entry_max": 179.49065990399953,
+      "stop": 172.79556682666745,
+      "target": 187.85952625066463,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "CRWD",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-16",
+      "alerted_at": "2026-10-19T12:24:52+00:00",
+      "score": 96.58,
+      "confidence": 0.0,
+      "entry_max": 231.1069465124967,
+      "stop": 221.1950891458388,
+      "target": 243.49676822081906,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "PANW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-16",
+      "alerted_at": "2026-10-19T12:24:54+00:00",
+      "score": 96.39,
+      "confidence": 0.0,
+      "entry_max": 347.70373851969947,
+      "stop": 332.49376913383423,
+      "target": 366.71620025203106,
+      "risk_reward": 1.25
+    }
+  ],
   "history": [
     {
       "symbol": "ABBV",
