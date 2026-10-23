@@ -4,23 +4,10 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-10-22",
-  "last_track_date": "2026-10-22",
+  "last_scan_date": "2026-10-23",
+  "last_track_date": "2026-10-23",
   "last_missed_scan_notice": "",
   "open_signals": [
-    {
-      "symbol": "CRWD",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-10-16",
-      "alerted_at": "2026-10-19T12:24:52+00:00",
-      "score": 96.58,
-      "confidence": 0.0,
-      "entry_max": 231.1069465124967,
-      "stop": 221.1950891458388,
-      "target": 243.49676822081906,
-      "risk_reward": 1.25
-    },
     {
       "symbol": "PANW",
       "asset_class": "stock",
@@ -35,17 +22,43 @@
       "risk_reward": 1.25
     },
     {
-      "symbol": "CSCO",
+      "symbol": "FCX",
       "asset_class": "stock",
       "direction": "long",
-      "signal_date": "2026-10-19",
-      "alerted_at": "2026-10-20T12:24:09+00:00",
-      "score": 96.09,
+      "signal_date": "2026-10-22",
+      "alerted_at": "2026-10-23T12:24:38+00:00",
+      "score": 97.42,
       "confidence": 0.0,
-      "entry_max": 107.40763438308781,
-      "stop": 104.987276028187,
-      "target": 110.43308232671382,
+      "entry_max": 65.4048758671537,
+      "stop": 63.23187355474385,
+      "target": 68.12112875766603,
       "risk_reward": 1.25
+    },
+    {
+      "symbol": "META",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-22",
+      "alerted_at": "2026-10-23T12:24:40+00:00",
+      "score": 93.27,
+      "confidence": 0.0,
+      "entry_max": 656.914959549599,
+      "stop": 635.408347417335,
+      "target": 683.7982247149289,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "MPC",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-22",
+      "alerted_at": "2026-10-23T12:24:42+00:00",
+      "score": 89.57,
+      "confidence": 0.0,
+      "entry_max": 464.3281055036912,
+      "stop": 446.6972981654363,
+      "target": 481.15512384932856,
+      "risk_reward": 0.954
     }
   ],
   "history": [
@@ -721,6 +734,50 @@
       "r_multiple": 1.25,
       "return_pct": 0.0456,
       "is_win": true
+    },
+    {
+      "symbol": "CRWD",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-16",
+      "alerted_at": "2026-10-19T12:24:52+00:00",
+      "score": 96.58,
+      "confidence": 0.0,
+      "entry_max": 231.1069465124967,
+      "stop": 221.1950891458388,
+      "target": 243.49676822081906,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "win",
+      "entry_price": 231.1069465124967,
+      "exit_price": 243.49676822081906,
+      "entry_date": "2026-10-19",
+      "exit_date": "2026-10-22",
+      "r_multiple": 1.25,
+      "return_pct": 0.0526,
+      "is_win": true
+    },
+    {
+      "symbol": "CSCO",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-19",
+      "alerted_at": "2026-10-20T12:24:09+00:00",
+      "score": 96.09,
+      "confidence": 0.0,
+      "entry_max": 107.40763438308781,
+      "stop": 104.987276028187,
+      "target": 110.43308232671382,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 106.11,
+      "exit_price": 104.987276028187,
+      "entry_date": "2026-10-20",
+      "exit_date": "2026-10-22",
+      "r_multiple": -0.4639,
+      "return_pct": -0.0116,
+      "is_win": false
     }
   ]
 }
