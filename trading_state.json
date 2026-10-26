@@ -4,8 +4,8 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-10-23",
-  "last_track_date": "2026-10-25",
+  "last_scan_date": "2026-10-26",
+  "last_track_date": "2026-10-26",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -33,6 +33,32 @@
       "stop": 446.6972981654363,
       "target": 481.15512384932856,
       "risk_reward": 0.954
+    },
+    {
+      "symbol": "NEM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-23",
+      "alerted_at": "2026-10-26T12:23:34+00:00",
+      "score": 93.11,
+      "confidence": 0.0,
+      "entry_max": 110.05879629967207,
+      "stop": 106.88867283387991,
+      "target": 114.02145063191226,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "AMZN",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-23",
+      "alerted_at": "2026-10-26T12:23:36+00:00",
+      "score": 82.64,
+      "confidence": 0.0,
+      "entry_max": 249.99904143968027,
+      "stop": 244.66826426719956,
+      "target": 256.6625129052811,
+      "risk_reward": 1.25
     }
   ],
   "history": [
