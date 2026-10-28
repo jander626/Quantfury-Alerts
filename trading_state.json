@@ -4,8 +4,8 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-10-27",
-  "last_track_date": "2026-10-27",
+  "last_scan_date": "2026-10-28",
+  "last_track_date": "2026-10-28",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -20,19 +20,6 @@
       "stop": 63.23187355474385,
       "target": 68.12112875766603,
       "risk_reward": 1.25
-    },
-    {
-      "symbol": "MPC",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-10-22",
-      "alerted_at": "2026-10-23T12:24:42+00:00",
-      "score": 89.57,
-      "confidence": 0.0,
-      "entry_max": 464.3281055036912,
-      "stop": 446.6972981654363,
-      "target": 481.15512384932856,
-      "risk_reward": 0.954
     },
     {
       "symbol": "NEM",
@@ -59,6 +46,32 @@
       "stop": 244.66826426719956,
       "target": 256.6625129052811,
       "risk_reward": 1.25
+    },
+    {
+      "symbol": "SHOP",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-27",
+      "alerted_at": "2026-10-28T12:24:18+00:00",
+      "score": 90.07,
+      "confidence": 0.0,
+      "entry_max": 167.9858717418085,
+      "stop": 162.18354709698585,
+      "target": 175.2387775478368,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "ABNB",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-27",
+      "alerted_at": "2026-10-28T12:24:20+00:00",
+      "score": 82.64,
+      "confidence": 0.0,
+      "entry_max": 170.18023890492455,
+      "stop": 163.36660036502514,
+      "target": 174.71433525467305,
+      "risk_reward": 0.665
     }
   ],
   "history": [
@@ -821,6 +834,28 @@
       "exit_date": "2026-10-23",
       "r_multiple": -0.1289,
       "return_pct": -0.0053,
+      "is_win": false
+    },
+    {
+      "symbol": "MPC",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-22",
+      "alerted_at": "2026-10-23T12:24:42+00:00",
+      "score": 89.57,
+      "confidence": 0.0,
+      "entry_max": 464.3281055036912,
+      "stop": 446.6972981654363,
+      "target": 481.15512384932856,
+      "risk_reward": 0.954,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 463.39999,
+      "exit_price": 446.6972981654363,
+      "entry_date": "2026-10-23",
+      "exit_date": "2026-10-27",
+      "r_multiple": -0.9474,
+      "return_pct": -0.037,
       "is_win": false
     }
   ]
