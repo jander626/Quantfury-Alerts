@@ -4,8 +4,8 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-10-28",
-  "last_track_date": "2026-10-28",
+  "last_scan_date": "2026-10-29",
+  "last_track_date": "2026-10-29",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -72,6 +72,32 @@
       "stop": 163.36660036502514,
       "target": 174.71433525467305,
       "risk_reward": 0.665
+    },
+    {
+      "symbol": "NOW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-28",
+      "alerted_at": "2026-10-29T12:24:17+00:00",
+      "score": 80.51,
+      "confidence": 0.0,
+      "entry_max": 151.93381801133523,
+      "stop": 138.97872732955494,
+      "target": 157.94654471578605,
+      "risk_reward": 0.464
+    },
+    {
+      "symbol": "COST",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-28",
+      "alerted_at": "2026-10-29T12:24:19+00:00",
+      "score": 80.31,
+      "confidence": 0.0,
+      "entry_max": 987.4823783188166,
+      "stop": 974.8093161353055,
+      "target": 1003.3237060482055,
+      "risk_reward": 1.25
     }
   ],
   "history": [
