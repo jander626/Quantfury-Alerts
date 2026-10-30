@@ -4,8 +4,8 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-10-29",
-  "last_track_date": "2026-10-29",
+  "last_scan_date": "2026-10-30",
+  "last_track_date": "2026-10-30",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -32,19 +32,6 @@
       "entry_max": 110.05879629967207,
       "stop": 106.88867283387991,
       "target": 114.02145063191226,
-      "risk_reward": 1.25
-    },
-    {
-      "symbol": "AMZN",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-10-23",
-      "alerted_at": "2026-10-26T12:23:36+00:00",
-      "score": 82.64,
-      "confidence": 0.0,
-      "entry_max": 249.99904143968027,
-      "stop": 244.66826426719956,
-      "target": 256.6625129052811,
       "risk_reward": 1.25
     },
     {
@@ -98,6 +85,19 @@
       "stop": 974.8093161353055,
       "target": 1003.3237060482055,
       "risk_reward": 1.25
+    },
+    {
+      "symbol": "USD/CHF",
+      "asset_class": "forex",
+      "direction": "long",
+      "signal_date": "2026-10-30",
+      "alerted_at": "2026-10-30T12:24:11+00:00",
+      "score": 88.52,
+      "confidence": 0.0,
+      "entry_max": 0.8225633468590854,
+      "stop": 0.8186455510469716,
+      "target": 0.82670783638937,
+      "risk_reward": 1.058
     }
   ],
   "history": [
@@ -882,6 +882,28 @@
       "exit_date": "2026-10-27",
       "r_multiple": -0.9474,
       "return_pct": -0.037,
+      "is_win": false
+    },
+    {
+      "symbol": "AMZN",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-10-23",
+      "alerted_at": "2026-10-26T12:23:36+00:00",
+      "score": 82.64,
+      "confidence": 0.0,
+      "entry_max": 249.99904143968027,
+      "stop": 244.66826426719956,
+      "target": 256.6625129052811,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 249.47,
+      "exit_price": 244.66826426719956,
+      "entry_date": "2026-10-26",
+      "exit_date": "2026-10-29",
+      "r_multiple": -0.9008,
+      "return_pct": -0.0202,
       "is_win": false
     }
   ]
