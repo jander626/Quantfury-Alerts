@@ -5,7 +5,7 @@
   ],
   "tg_offset": 419999581,
   "last_scan_date": "2026-10-30",
-  "last_track_date": "2026-10-31",
+  "last_track_date": "2026-11-01",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -20,19 +20,6 @@
       "stop": 163.36660036502514,
       "target": 174.71433525467305,
       "risk_reward": 0.665
-    },
-    {
-      "symbol": "USD/CHF",
-      "asset_class": "forex",
-      "direction": "long",
-      "signal_date": "2026-10-30",
-      "alerted_at": "2026-10-30T12:24:11+00:00",
-      "score": 88.52,
-      "confidence": 0.0,
-      "entry_max": 0.8225633468590854,
-      "stop": 0.8186455510469716,
-      "target": 0.82670783638937,
-      "risk_reward": 1.058
     }
   ],
   "history": [
@@ -950,6 +937,28 @@
       "r_multiple": 1.9386,
       "return_pct": 0.0239,
       "is_win": true
+    },
+    {
+      "symbol": "USD/CHF",
+      "asset_class": "forex",
+      "direction": "long",
+      "signal_date": "2026-10-30",
+      "alerted_at": "2026-10-30T12:24:11+00:00",
+      "score": 88.52,
+      "confidence": 0.0,
+      "entry_max": 0.8225633468590854,
+      "stop": 0.8186455510469716,
+      "target": 0.82670783638937,
+      "risk_reward": 1.058,
+      "status": "expired",
+      "outcome": "no_fill",
+      "entry_price": NaN,
+      "exit_price": NaN,
+      "entry_date": null,
+      "exit_date": null,
+      "r_multiple": null,
+      "return_pct": null,
+      "is_win": false
     }
   ]
 }
