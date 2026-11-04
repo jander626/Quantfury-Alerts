@@ -4,8 +4,8 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-11-03",
-  "last_track_date": "2026-11-03",
+  "last_scan_date": "2026-11-04",
+  "last_track_date": "2026-11-04",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -61,19 +61,6 @@
       "risk_reward": 1.25
     },
     {
-      "symbol": "CRM",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-11-02",
-      "alerted_at": "2026-11-03T12:31:50+00:00",
-      "score": 93.92,
-      "confidence": 0.0,
-      "entry_max": 228.85167087464114,
-      "stop": 221.72718854226477,
-      "target": 237.7572737901116,
-      "risk_reward": 1.25
-    },
-    {
       "symbol": "SNOW",
       "asset_class": "stock",
       "direction": "long",
@@ -85,6 +72,45 @@
       "stop": 282.2388787632132,
       "target": 312.62687921564554,
       "risk_reward": 1.25
+    },
+    {
+      "symbol": "CRM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-03",
+      "alerted_at": "2026-11-04T12:24:13+00:00",
+      "score": 97.08,
+      "confidence": 0.0,
+      "entry_max": 224.9274891693096,
+      "stop": 213.76083694356345,
+      "target": 234.019119733675,
+      "risk_reward": 0.814
+    },
+    {
+      "symbol": "PANW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-03",
+      "alerted_at": "2026-11-04T12:24:15+00:00",
+      "score": 90.12,
+      "confidence": 0.0,
+      "entry_max": 355.9060205419791,
+      "stop": 337.62799648600696,
+      "target": 374.92605568190936,
+      "risk_reward": 1.041
+    },
+    {
+      "symbol": "SLB",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-03",
+      "alerted_at": "2026-11-04T12:24:17+00:00",
+      "score": 86.16,
+      "confidence": 0.0,
+      "entry_max": 52.59149082631252,
+      "stop": 48.546169724562496,
+      "target": 54.1297935806876,
+      "risk_reward": 0.38
     }
   ],
   "history": [
@@ -1023,6 +1049,28 @@
       "exit_date": null,
       "r_multiple": null,
       "return_pct": null,
+      "is_win": false
+    },
+    {
+      "symbol": "CRM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-02",
+      "alerted_at": "2026-11-03T12:31:50+00:00",
+      "score": 93.92,
+      "confidence": 0.0,
+      "entry_max": 228.85167087464114,
+      "stop": 221.72718854226477,
+      "target": 237.7572737901116,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 222.39999,
+      "exit_price": 221.72718854226477,
+      "entry_date": "2026-11-03",
+      "exit_date": "2026-11-03",
+      "r_multiple": -0.0944,
+      "return_pct": -0.004,
       "is_win": false
     }
   ]
