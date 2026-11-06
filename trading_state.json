@@ -4,23 +4,10 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-11-05",
-  "last_track_date": "2026-11-05",
+  "last_scan_date": "2026-11-06",
+  "last_track_date": "2026-11-06",
   "last_missed_scan_notice": "",
   "open_signals": [
-    {
-      "symbol": "SNOW",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-11-02",
-      "alerted_at": "2026-11-03T12:31:52+00:00",
-      "score": 93.72,
-      "confidence": 0.0,
-      "entry_max": 295.74465674207204,
-      "stop": 282.2388787632132,
-      "target": 312.62687921564554,
-      "risk_reward": 1.25
-    },
     {
       "symbol": "CRM",
       "asset_class": "stock",
@@ -35,19 +22,6 @@
       "risk_reward": 0.814
     },
     {
-      "symbol": "PANW",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-11-03",
-      "alerted_at": "2026-11-04T12:24:15+00:00",
-      "score": 90.12,
-      "confidence": 0.0,
-      "entry_max": 355.9060205419791,
-      "stop": 337.62799648600696,
-      "target": 374.92605568190936,
-      "risk_reward": 1.041
-    },
-    {
       "symbol": "SLB",
       "asset_class": "stock",
       "direction": "long",
@@ -59,6 +33,71 @@
       "stop": 48.546169724562496,
       "target": 54.1297935806876,
       "risk_reward": 0.38
+    },
+    {
+      "symbol": "PANW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-05",
+      "alerted_at": "2026-11-06T12:24:11+00:00",
+      "score": 99.02,
+      "confidence": 0.0,
+      "entry_max": 320.7668150020126,
+      "stop": 304.508668329979,
+      "target": 341.0894983420546,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "OXY",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-05",
+      "alerted_at": "2026-11-06T12:24:13+00:00",
+      "score": 95.33,
+      "confidence": 0.0,
+      "entry_max": 56.90932159970008,
+      "stop": 55.44446400049986,
+      "target": 58.740393598700344,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "MPC",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-05",
+      "alerted_at": "2026-11-06T12:24:15+00:00",
+      "score": 95.14,
+      "confidence": 0.0,
+      "entry_max": 383.44401142670506,
+      "stop": 367.11334095549154,
+      "target": 403.8573495157219,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "CRWD",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-05",
+      "alerted_at": "2026-11-06T12:24:17+00:00",
+      "score": 94.18,
+      "confidence": 0.0,
+      "entry_max": 221.46701958900732,
+      "stop": 210.08830068498776,
+      "target": 235.69041821903178,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "EOG",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-05",
+      "alerted_at": "2026-11-06T12:24:19+00:00",
+      "score": 93.59,
+      "confidence": 0.0,
+      "entry_max": 146.2218013451968,
+      "stop": 142.6703310913386,
+      "target": 150.66113916251956,
+      "risk_reward": 1.25
     }
   ],
   "history": [
@@ -1107,6 +1146,50 @@
       "exit_date": "2026-11-04",
       "r_multiple": -1.0215,
       "return_pct": -0.0633,
+      "is_win": false
+    },
+    {
+      "symbol": "SNOW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-02",
+      "alerted_at": "2026-11-03T12:31:52+00:00",
+      "score": 93.72,
+      "confidence": 0.0,
+      "entry_max": 295.74465674207204,
+      "stop": 282.2388787632132,
+      "target": 312.62687921564554,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 284.79999,
+      "exit_price": 281.12,
+      "entry_date": "2026-11-03",
+      "exit_date": "2026-11-05",
+      "r_multiple": -0.2725,
+      "return_pct": -0.0139,
+      "is_win": false
+    },
+    {
+      "symbol": "PANW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-03",
+      "alerted_at": "2026-11-04T12:24:15+00:00",
+      "score": 90.12,
+      "confidence": 0.0,
+      "entry_max": 355.9060205419791,
+      "stop": 337.62799648600696,
+      "target": 374.92605568190936,
+      "risk_reward": 1.041,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 347.19,
+      "exit_price": 337.54999,
+      "entry_date": "2026-11-04",
+      "exit_date": "2026-11-05",
+      "r_multiple": -0.5274,
+      "return_pct": -0.0288,
       "is_win": false
     }
   ]
