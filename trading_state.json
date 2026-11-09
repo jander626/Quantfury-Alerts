@@ -4,8 +4,8 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-11-06",
-  "last_track_date": "2026-11-08",
+  "last_scan_date": "2026-11-09",
+  "last_track_date": "2026-11-09",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -85,6 +85,58 @@
       "stop": 142.6703310913386,
       "target": 150.66113916251956,
       "risk_reward": 1.25
+    },
+    {
+      "symbol": "LMT",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-06",
+      "alerted_at": "2026-11-09T12:24:35+00:00",
+      "score": 95.16,
+      "confidence": 0.0,
+      "entry_max": 572.9418905481754,
+      "stop": 557.3102277530412,
+      "target": 592.4814690420931,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "CVX",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-06",
+      "alerted_at": "2026-11-09T12:24:37+00:00",
+      "score": 93.46,
+      "confidence": 0.0,
+      "entry_max": 214.23820617671052,
+      "stop": 209.88725460776317,
+      "target": 219.6655600990789,
+      "risk_reward": 1.247
+    },
+    {
+      "symbol": "TXN",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-06",
+      "alerted_at": "2026-11-09T12:24:39+00:00",
+      "score": 84.56,
+      "confidence": 0.0,
+      "entry_max": 281.03155702573673,
+      "stop": 270.0061543247544,
+      "target": 293.27011377819264,
+      "risk_reward": 1.11
+    },
+    {
+      "symbol": "PM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-06",
+      "alerted_at": "2026-11-09T12:24:41+00:00",
+      "score": 80.56,
+      "confidence": 0.0,
+      "entry_max": 199.58513397253324,
+      "stop": 193.05162200915558,
+      "target": 205.26891388097744,
+      "risk_reward": 0.87
     }
   ],
   "history": [
