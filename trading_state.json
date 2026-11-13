@@ -4,23 +4,10 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-11-12",
-  "last_track_date": "2026-11-12",
+  "last_scan_date": "2026-11-13",
+  "last_track_date": "2026-11-13",
   "last_missed_scan_notice": "",
   "open_signals": [
-    {
-      "symbol": "MPC",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-11-05",
-      "alerted_at": "2026-11-06T12:24:15+00:00",
-      "score": 95.14,
-      "confidence": 0.0,
-      "entry_max": 383.44401142670506,
-      "stop": 367.11334095549154,
-      "target": 403.8573495157219,
-      "risk_reward": 1.25
-    },
     {
       "symbol": "PM",
       "asset_class": "stock",
@@ -33,6 +20,32 @@
       "stop": 190.23645897107951,
       "target": 200.61720667519327,
       "risk_reward": 1.25
+    },
+    {
+      "symbol": "ABT",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-12",
+      "alerted_at": "2026-11-13T12:23:16+00:00",
+      "score": 87.91,
+      "confidence": 0.0,
+      "entry_max": 108.14792038135862,
+      "stop": 104.3006932062138,
+      "target": 111.14098831922067,
+      "risk_reward": 0.778
+    },
+    {
+      "symbol": "NEE",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-12",
+      "alerted_at": "2026-11-13T12:23:18+00:00",
+      "score": 87.33,
+      "confidence": 0.0,
+      "entry_max": 85.79937401392532,
+      "stop": 82.7502086620249,
+      "target": 87.49728739367636,
+      "risk_reward": 0.557
     }
   ],
   "history": [
@@ -1412,6 +1425,28 @@
       "r_multiple": null,
       "return_pct": null,
       "is_win": false
+    },
+    {
+      "symbol": "MPC",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-05",
+      "alerted_at": "2026-11-06T12:24:15+00:00",
+      "score": 95.14,
+      "confidence": 0.0,
+      "entry_max": 383.44401142670506,
+      "stop": 367.11334095549154,
+      "target": 403.8573495157219,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "win",
+      "entry_price": 379.62,
+      "exit_price": 404.5,
+      "entry_date": "2026-11-06",
+      "exit_date": "2026-11-12",
+      "r_multiple": 1.5235,
+      "return_pct": 0.0645,
+      "is_win": true
     }
   ]
 }
