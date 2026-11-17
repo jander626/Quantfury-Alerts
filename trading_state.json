@@ -4,23 +4,10 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-11-16",
-  "last_track_date": "2026-11-16",
+  "last_scan_date": "2026-11-17",
+  "last_track_date": "2026-11-17",
   "last_missed_scan_notice": "",
   "open_signals": [
-    {
-      "symbol": "PM",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-11-09",
-      "alerted_at": "2026-11-10T12:25:39+00:00",
-      "score": 90.29,
-      "confidence": 0.0,
-      "entry_max": 194.8501246173523,
-      "stop": 190.23645897107951,
-      "target": 200.61720667519327,
-      "risk_reward": 1.25
-    },
     {
       "symbol": "ABT",
       "asset_class": "stock",
@@ -72,6 +59,71 @@
       "stop": 174.31539341109124,
       "target": 189.95988565581396,
       "risk_reward": 0.449
+    },
+    {
+      "symbol": "GM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-16",
+      "alerted_at": "2026-11-17T12:24:49+00:00",
+      "score": 90.86,
+      "confidence": 0.0,
+      "entry_max": 84.50879482526705,
+      "stop": 82.27200862455493,
+      "target": 87.30477757615719,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "DE",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-16",
+      "alerted_at": "2026-11-17T12:24:51+00:00",
+      "score": 90.31,
+      "confidence": 0.0,
+      "entry_max": 659.9087599586413,
+      "stop": 644.1253734022646,
+      "target": 679.6379931541122,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "AMZN",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-16",
+      "alerted_at": "2026-11-17T12:24:53+00:00",
+      "score": 83.79,
+      "confidence": 0.0,
+      "entry_max": 260.4938021037052,
+      "stop": 244.96539929876494,
+      "target": 269.63980911605586,
+      "risk_reward": 0.589
+    },
+    {
+      "symbol": "NEM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-16",
+      "alerted_at": "2026-11-17T12:24:55+00:00",
+      "score": 82.58,
+      "confidence": 0.0,
+      "entry_max": 111.67053804862472,
+      "stop": 106.4964873171251,
+      "target": 116.20566487737379,
+      "risk_reward": 0.877
+    },
+    {
+      "symbol": "SNOW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-16",
+      "alerted_at": "2026-11-17T12:24:57+00:00",
+      "score": 81.37,
+      "confidence": 0.0,
+      "entry_max": 285.3119717626559,
+      "stop": 264.7643560791147,
+      "target": 301.218510971509,
+      "risk_reward": 0.774
     }
   ],
   "history": [
@@ -1472,6 +1524,28 @@
       "exit_date": "2026-11-12",
       "r_multiple": 1.5235,
       "return_pct": 0.0645,
+      "is_win": true
+    },
+    {
+      "symbol": "PM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-09",
+      "alerted_at": "2026-11-10T12:25:39+00:00",
+      "score": 90.29,
+      "confidence": 0.0,
+      "entry_max": 194.8501246173523,
+      "stop": 190.23645897107951,
+      "target": 200.61720667519327,
+      "risk_reward": 1.25,
+      "status": "closed",
+      "outcome": "win",
+      "entry_price": 194.8501246173523,
+      "exit_price": 200.61720667519327,
+      "entry_date": "2026-11-10",
+      "exit_date": "2026-11-16",
+      "r_multiple": 1.25,
+      "return_pct": 0.0286,
       "is_win": true
     }
   ]
