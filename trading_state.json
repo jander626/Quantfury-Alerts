@@ -4,8 +4,8 @@
     "8635569997"
   ],
   "tg_offset": 419999581,
-  "last_scan_date": "2026-11-17",
-  "last_track_date": "2026-11-17",
+  "last_scan_date": "2026-11-18",
+  "last_track_date": "2026-11-18",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -113,17 +113,43 @@
       "risk_reward": 0.877
     },
     {
-      "symbol": "SNOW",
+      "symbol": "LOW",
       "asset_class": "stock",
       "direction": "long",
-      "signal_date": "2026-11-16",
-      "alerted_at": "2026-11-17T12:24:57+00:00",
-      "score": 81.37,
+      "signal_date": "2026-11-17",
+      "alerted_at": "2026-11-18T12:25:34+00:00",
+      "score": 93.32,
       "confidence": 0.0,
-      "entry_max": 285.3119717626559,
-      "stop": 264.7643560791147,
-      "target": 301.218510971509,
-      "risk_reward": 0.774
+      "entry_max": 222.3100106680475,
+      "stop": 217.3766755532542,
+      "target": 228.47667956153916,
+      "risk_reward": 1.25
+    },
+    {
+      "symbol": "AMGN",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-17",
+      "alerted_at": "2026-11-18T12:25:36+00:00",
+      "score": 91.53,
+      "confidence": 0.0,
+      "entry_max": 461.37355152901745,
+      "stop": 445.8921551569942,
+      "target": 472.8520899590756,
+      "risk_reward": 0.741
+    },
+    {
+      "symbol": "MSFT",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-17",
+      "alerted_at": "2026-11-18T12:25:38+00:00",
+      "score": 90.87,
+      "confidence": 0.0,
+      "entry_max": 510.85812294891576,
+      "stop": 494.9706323503614,
+      "target": 526.2518994453017,
+      "risk_reward": 0.969
     }
   ],
   "history": [
@@ -1547,6 +1573,28 @@
       "r_multiple": 1.25,
       "return_pct": 0.0286,
       "is_win": true
+    },
+    {
+      "symbol": "SNOW",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-16",
+      "alerted_at": "2026-11-17T12:24:57+00:00",
+      "score": 81.37,
+      "confidence": 0.0,
+      "entry_max": 285.3119717626559,
+      "stop": 264.7643560791147,
+      "target": 301.218510971509,
+      "risk_reward": 0.774,
+      "status": "closed",
+      "outcome": "loss",
+      "entry_price": 279.29999,
+      "exit_price": 264.7643560791147,
+      "entry_date": "2026-11-17",
+      "exit_date": "2026-11-17",
+      "r_multiple": -0.7074,
+      "return_pct": -0.053,
+      "is_win": false
     }
   ]
 }
