@@ -5,7 +5,7 @@
   ],
   "tg_offset": 419999581,
   "last_scan_date": "2026-11-25",
-  "last_track_date": "2026-11-25",
+  "last_track_date": "2026-11-26",
   "last_missed_scan_notice": "",
   "open_signals": [
     {
@@ -20,19 +20,6 @@
       "stop": 82.7502086620249,
       "target": 87.49728739367636,
       "risk_reward": 0.557
-    },
-    {
-      "symbol": "MMM",
-      "asset_class": "stock",
-      "direction": "long",
-      "signal_date": "2026-11-13",
-      "alerted_at": "2026-11-16T12:23:22+00:00",
-      "score": 80.59,
-      "confidence": 0.0,
-      "entry_max": 185.1138197667263,
-      "stop": 174.31539341109124,
-      "target": 189.95988565581396,
-      "risk_reward": 0.449
     }
   ],
   "history": [
@@ -1675,6 +1662,28 @@
       "exit_date": "2026-11-19",
       "r_multiple": 1.3062,
       "return_pct": 0.0401,
+      "is_win": true
+    },
+    {
+      "symbol": "MMM",
+      "asset_class": "stock",
+      "direction": "long",
+      "signal_date": "2026-11-13",
+      "alerted_at": "2026-11-16T12:23:22+00:00",
+      "score": 80.59,
+      "confidence": 0.0,
+      "entry_max": 185.1138197667263,
+      "stop": 174.31539341109124,
+      "target": 189.95988565581396,
+      "risk_reward": 0.449,
+      "status": "closed",
+      "outcome": "win",
+      "entry_price": 183.24001,
+      "exit_price": 189.95988565581396,
+      "entry_date": "2026-11-16",
+      "exit_date": "2026-11-25",
+      "r_multiple": 0.6223,
+      "return_pct": 0.0357,
       "is_win": true
     }
   ]
